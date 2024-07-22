@@ -48,13 +48,50 @@ export const Icons = {
 			/>
 		</svg>
 	),
+	menu: (props: IconProps) => (
+		<svg
+			{...props}
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			// class="lucide lucide-gantt-chart"
+		>
+			<path d="M8 6h10" />
+			<path d="M6 12h9" />
+			<path d="M11 18h7" />
+		</svg>
+	),
+	mail: (props: IconProps) => (
+		<svg
+			{...props}
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			stroke="currentColor"
+			stroke-width="0"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
+			<path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+		</svg>
+	),
 	twitter: (props: IconProps) => (
 		<svg
 			{...props}
+			xmlns="http://www.w3.org/2000/svg"
+			width="23"
 			height="23"
 			viewBox="0 0 1200 1227"
-			width="23"
-			xmlns="http://www.w3.org/2000/svg"
+			fill="currentColor"
+			stroke="currentColor"
 		>
 			<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
 		</svg>

@@ -2,7 +2,7 @@
 
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Link, { LinkProps } from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { Icons } from '@/components/icons';
@@ -21,6 +21,7 @@ import { cn } from '@/lib/utils';
 
 export function MobileNav() {
 	const [open, setOpen] = React.useState(false);
+	const pathname = usePathname();
 
 	return (
 		<Sheet open={open} onOpenChange={setOpen}>
@@ -29,7 +30,7 @@ export function MobileNav() {
 					variant="ghost"
 					className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
 				>
-					<Icons.logo className="h-6 w-6" />
+					<Icons.menu className="h-6 w-6" />
 					<span className="sr-only">Toggle Menu</span>
 				</Button>
 			</SheetTrigger>
@@ -39,10 +40,10 @@ export function MobileNav() {
 					className="flex items-center"
 					onOpenChange={setOpen}
 				>
-					<Icons.logo className="mr-2 h-4 w-4" />
+					<Icons.logo className="mr-2 h-6 w-6" />
 					<span className="font-bold">{siteConfig.name}</span>
 				</MobileLink>
-				<ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+				<ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-8">
 					<div className="flex flex-col space-y-3">
 						{navsConfig.mainNav?.map(
 							(item: MainNavItem) =>
@@ -51,6 +52,12 @@ export function MobileNav() {
 										key={item.href}
 										href={item.href}
 										onOpenChange={setOpen}
+										className={cn(
+											'transition-colors hover:underline hover:underline-offset-4',
+											pathname?.startsWith(`/${item.title.toLowerCase()}`)
+												? 'text-foreground font-medium'
+												: 'text-foreground/60'
+										)}
 									>
 										{item.title}
 									</MobileLink>
@@ -70,7 +77,14 @@ export function MobileNav() {
 														<MobileLink
 															href={item.href}
 															onOpenChange={setOpen}
-															className="text-muted-foreground"
+															className={cn(
+																'transition-colors hover:underline hover:underline-offset-4',
+																pathname?.includes(
+																	`/${item.title.toLowerCase()}`
+																)
+																	? 'text-foreground font-medium'
+																	: 'text-foreground/60'
+															)}
 														>
 															{item.title}
 															{item.label && (

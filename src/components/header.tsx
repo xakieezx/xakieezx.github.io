@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config/site';
+import Link from 'next/link';
 import { MainNav } from './main-nav';
 import { MobileNav } from './mobile-nav';
 import { ThemeToggle } from './theme-toggle';
@@ -9,7 +10,9 @@ export function Header() {
 			<nav className="flex h-14 w-full justify-between items-center">
 				<MainNav />
 				<MobileNav />
-				<span className="font-bold md:hidden">{siteConfig.name}</span>
+				<Link href="/">
+					<span className="font-bold md:hidden">{siteConfig.name}</span>
+				</Link>
 				<ThemeToggle />
 			</nav>
 		</header>

@@ -29,7 +29,7 @@ export const navsConfig: NavsConfig = {
 			href: '/about',
 		},
 		{
-			title: 'Projects',
+			title: 'Project',
 			href: '/project',
 		},
 		{
@@ -39,7 +39,7 @@ export const navsConfig: NavsConfig = {
 	],
 	sidebarNav: [
 		{
-			title: 'Projects',
+			title: 'Go to',
 			items: [
 				{
 					title: 'EazyGas',
