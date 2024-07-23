@@ -1,9 +1,10 @@
+import { ProjectCard } from '@/components/project-card';
+import { projectCardConfig } from '@/config/project';
+
 export default function Page() {
 	return (
-		<div className="bg-green-300 text-4xl font-extrabold">
-			<div className="grid grid-cols-2">
-				<p>project</p>
-			</div>
+		<div className="flex flex-col gap-4">
+			<ProjectCard project={projectCardConfig.eazygas} />
 		</div>
 	);
 }
