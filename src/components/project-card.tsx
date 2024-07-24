@@ -17,14 +17,16 @@ import {
 	CarouselPrevious,
 } from '@/components/ui/carousel';
 import { ProjectCardDetails } from '@/config/project';
+import { cn } from '@/lib/utils';
 import Autoplay from 'embla-carousel-autoplay';
 import { LaptopMinimal, Smartphone, SquareArrowOutUpRight } from 'lucide-react';
 import Image, { ImageLoaderProps } from 'next/image';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
+import { Icons } from './icons';
 
 const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
-	return `/project/eazygas${src}?w=${width}&q=${quality || 75}`;
+	return `${src}?w=${width}&q=${quality || 75}`;
 };
 
 interface ProjectCardProps {
@@ -47,7 +49,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 			onMouseLeave={plugin.current.reset}
 		>
 			<Card>
-				<CardHeader>
+				<CardHeader className="pb-0">
 					<CardTitle>
 						<div className="flex justify-between items-center">
 							<p>{project.title}</p>
@@ -77,30 +79,52 @@ export function ProjectCard({ project }: ProjectCardProps) {
 					</CardTitle>
 					<CardDescription>{project.description}</CardDescription>
 				</CardHeader>
-				<CardContent>
+				<CardContent className="p-0">
 					<CarouselContent>
 						{project.images.map((item, index) => (
-							<CarouselItem key={index}>
-								<div className="w-full h-full flex flex-col items-center gap-2">
-									<Image
-										loader={imageLoader}
-										src={view === 'desktop' ? item.srcDesktop : item.srcMobile}
-										alt={`Image ${index}`}
-										width={500}
-										height={300}
-										className="rounded-lg border border-muted-foreground"
-									/>
-									<div className="flex justify-between w-full px-10">
-										<CarouselPrevious className="static left-0 top-0 translate-y-0" />
+							<CarouselItem key={index} className="pl-10 pr-6 pt-4 pb-4">
+								<div className="h-full w-full flex flex-col items-center gap-4">
+									<div
+										className={cn(
+											'rounded-lg relative flex items-center justify-center h-[300px] w-full',
+											view === 'desktop' ? 'w-full' : 'w-[200px]'
+										)}
+									>
+										{(view === 'desktop' && !item.srcDesktop) ||
+										(view === 'mobile' && !item.srcMobile) ? (
+											<div className="relative w-[50px] h-[50px] max-w-full max-h-full">
+												<Icons.imagePlaceholder />
+											</div>
+										) : (
+											<div className="relative w-full h-full max-w-full max-h-full">
+												<Image
+													loader={imageLoader}
+													src={
+														view === 'desktop'
+															? item.srcDesktop
+															: item.srcMobile
+													}
+													alt={item.caption}
+													layout="fill"
+													objectFit="contain"
+													className={cn(
+														'rounded-lg transition-all hover:scale-105'
+													)}
+												/>
+											</div>
+										)}
+									</div>
+									<div className="flex items-center justify-center w-full">
 										<p className="text-xs text-muted-foreground">
 											{item.caption}
 										</p>
-										<CarouselNext className="static right-0 top-0 translate-y-0" />
 									</div>
 								</div>
 							</CarouselItem>
 						))}
 					</CarouselContent>
+					<CarouselPrevious className="left-2" />
+					<CarouselNext className="right-2" />
 				</CardContent>
 				<CardFooter>
 					<div className="flex justify-between items-center w-full">

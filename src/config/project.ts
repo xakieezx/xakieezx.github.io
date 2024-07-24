@@ -16,6 +16,7 @@ export interface ProjectCardConfig {
 	[key: string]: ProjectCardDetails;
 }
 
+// empty srcDesktop and srcMobile will load image-placholder.svg
 export const projectCardConfig: ProjectCardConfig = {
 	eazygas: {
 		title: 'EazyGas',
@@ -24,14 +25,9 @@ export const projectCardConfig: ProjectCardConfig = {
 		footer2: 'Universiti Teknologi Malaysia',
 		images: [
 			{
-				srcDesktop: '/desktop/1.png',
-				srcMobile: '/mobile/1.png',
-				caption: 'Sign up page',
-			},
-			{
-				srcDesktop: '/desktop/1.png',
-				srcMobile: '/mobile/1.png',
-				caption: 'Test page',
+				srcDesktop: '',
+				srcMobile: '',
+				caption: 'Caption',
 			},
 		],
 	},
