@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
 	title: 'akieez',
 	description: 'Nextjs app',
+	icons: {
+		icon: '/site/favicon.ico',
+	},
 };
 
 export default function RootLayout({
