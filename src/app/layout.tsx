@@ -27,7 +27,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<div className="relative flex flex-col mx-auto justify-center min-h-screen w-full max-w-3xl bg-background pl-2 pr-2">
+					<div className="relative flex flex-col mx-auto justify-center min-h-screen w-full bg-background pl-2 pr-2">
 						{children}
 					</div>
 				</ThemeProvider>
