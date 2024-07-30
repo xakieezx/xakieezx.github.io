@@ -50,12 +50,12 @@ export default function Home() {
 			</div>
 
 			{/* intro */}
-			<div className="mt-20 text-2xl tracking-tighter font-semibold">
+			<div className="mt-20 text-2xl tracking-tighter font-semibold text-center">
 				Hello, I&apos;m Ahmad Fikri, a full-stack web developer based in Kuala
 				Lumpur, Malaysia{' '}
 				<Icons.flagMalaysia className="inline-flex h-8 w-8 rounded-md" />
 			</div>
-			<div className="mt-5 text-sm">
+			<div className="mt-5 text-sm text-center">
 				I never thought that I enjoyed having a headache while doing all this
 				stuff.{' '}
 				<Link
@@ -65,6 +65,8 @@ export default function Home() {
 					<p>Read more about me.</p>
 				</Link>
 			</div>
+
+			{/* tech stack */}
 			<div className="mt-20 flex flex-wrap gap-4 items-center justify-center text-zinc-500 text-4xl">
 				<SiNextdotjs className="hover:text-black hover:dark:bg-primary hover:dark:rounded-md hover:scale-125 transition-all duration-200 ease-in-out" />
 				<SiReact className="hover:text-[#58C4DC] hover:scale-125 transition-all duration-200 ease-in-out" />
