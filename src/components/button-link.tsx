@@ -41,7 +41,7 @@ export function ButtonLink({ placeholder, link, copy, icon }: ButtonLinkProps) {
 					onClick={handleCopy}
 				/>
 				{copied && (
-					<p className="ml-2 text-[10px] tracking-tighter text-zinc-400 bg-red-100">
+					<p className="ml-2 text-[10px] tracking-tighter text-zinc-400">
 						Copied!
 					</p>
 				)}
