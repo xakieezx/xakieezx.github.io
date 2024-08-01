@@ -4,48 +4,53 @@ export const Icons = {
 	logo: (props: IconProps) => (
 		<svg
 			{...props}
-			width="48"
-			height="48"
-			viewBox="0 0 48 48"
+			viewBox="0 0 24 24"
 			fill="currentColor"
 			xmlns="http://www.w3.org/2000/svg"
 		>
-			<path
-				d="M11 11L36 11"
-				stroke="currentColor"
-				strokeWidth="4"
-				strokeLinecap="round"
-			/>
-			<path
-				d="M24 11L24 41"
-				stroke="currentColor"
-				strokeWidth="4"
-				strokeLinecap="round"
-			/>
-			<path
-				d="M33 24H24"
-				stroke="currentColor"
-				strokeWidth="4"
-				strokeLinecap="round"
-			/>
-			<path
-				d="M11 11V15"
-				stroke="currentColor"
-				strokeWidth="4"
-				strokeLinecap="round"
-			/>
-			<path
-				d="M11 24V36"
-				stroke="currentColor"
-				strokeWidth="4"
-				strokeLinecap="round"
-			/>
-			<path
-				d="M11 24H22"
-				stroke="currentColor"
-				strokeWidth="4"
-				strokeLinecap="round"
-			/>
+			<g id="logo">
+				<g id="middle">
+					<path
+						id="Line 22"
+						d="M12 20L12 4"
+						stroke="currentColor"
+						strokeWidth={2}
+						strokeLinecap="round"
+					/>
+				</g>
+				<g id="center">
+					<path
+						id="Line 19"
+						d="M5 11H17"
+						stroke="currentColor"
+						strokeWidth={2}
+						strokeLinecap="round"
+					/>
+					<path
+						id="Line 21"
+						d="M5 17L5 11"
+						stroke="currentColor"
+						strokeWidth={2}
+						strokeLinecap="round"
+					/>
+				</g>
+				<g id="top">
+					<path
+						id="Line 18"
+						d="M5 4L19 4"
+						stroke="currentColor"
+						strokeWidth={2}
+						strokeLinecap="round"
+					/>
+					<path
+						id="Line 20"
+						d="M5 7L5 4"
+						stroke="currentColor"
+						strokeWidth={2}
+						strokeLinecap="round"
+					/>
+				</g>
+			</g>
 		</svg>
 	),
 	menu: (props: IconProps) => (
