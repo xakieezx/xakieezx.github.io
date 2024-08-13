@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+	.aboutPageHeight {
+		height: calc(100vh - 7rem);
+	}
+}
