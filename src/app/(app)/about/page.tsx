@@ -74,7 +74,7 @@ export default function Page() {
 					<div className="flex-none relative w-[160px] h-[160px] border rounded-3xl ml-6 mb-2">
 						<Image
 							loader={imageLoader}
-							src="/map.png"
+							src="/site/map.png"
 							alt="Location of akieez"
 							layout="fill"
 							objectFit="cover"
@@ -169,7 +169,7 @@ export default function Page() {
 					<div className="flex-none float-left relative w-[160px] h-[320px] border rounded-3xl mr-6 mb-2">
 						<Image
 							loader={imageLoader}
-							src="/aki.jpeg"
+							src="/site/aki.jpeg"
 							alt="Picture of akieez"
 							layout="fill"
 							objectFit="cover"
