@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 	title: 'akieez',
 	description: 'Nextjs app',
 	icons: {
-		icon: '/site/favicon.ico',
+		icon: '/favicon.ico',
 	},
 };
 
