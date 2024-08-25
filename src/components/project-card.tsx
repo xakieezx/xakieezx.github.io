@@ -105,10 +105,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
 															: item.srcMobile
 													}
 													alt={item.caption}
-													layout="fill"
-													objectFit="contain"
+													fill
 													className={cn(
-														'rounded-lg transition-all hover:scale-105'
+														'rounded-lg transition-all hover:scale-105 object-contain'
 													)}
 												/>
 											</div>

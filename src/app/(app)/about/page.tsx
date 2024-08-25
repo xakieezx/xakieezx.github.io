@@ -76,9 +76,8 @@ export default function Page() {
 							loader={imageLoader}
 							src="/map.png"
 							alt="Location of akieez"
-							layout="fill"
-							objectFit="cover"
-							className="rounded-3xl"
+							fill
+							className="rounded-3xl object-cover"
 						/>
 						<div className="w-3 h-3 absolute border border-transparent rounded-full bg-green-500 top-1/2 left-1/2 "></div>
 						<div className="w-3 h-3 absolute border border-transparent rounded-full bg-black top-1/2 left-1/2 animate-ping"></div>
@@ -171,9 +170,8 @@ export default function Page() {
 							loader={imageLoader}
 							src="/aki.jpeg"
 							alt="Picture of akieez"
-							layout="fill"
-							objectFit="cover"
-							className="rounded-3xl"
+							fill
+							className="rounded-3xl object-cover"
 						/>
 					</div>
 					<p className="mb-4 text-justify">
