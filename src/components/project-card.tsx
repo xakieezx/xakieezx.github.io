@@ -87,7 +87,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
 									<div
 										className={cn(
 											'rounded-lg relative flex items-center justify-center h-[300px] w-full',
-											view === 'desktop' ? 'w-full' : 'w-[200px]'
+											view === 'desktop' ||
+												(view === 'mobile' && item.srcMobile?.includes('.mp4'))
+												? 'w-full'
+												: 'w-[200px]'
 										)}
 									>
 										{(view === 'desktop' && !item.srcDesktop) ||
@@ -97,19 +100,40 @@ export function ProjectCard({ project }: ProjectCardProps) {
 											</div>
 										) : (
 											<div className="relative w-full h-full max-w-full max-h-full">
-												<Image
-													loader={imageLoader}
-													src={
-														view === 'desktop'
-															? item.srcDesktop
-															: item.srcMobile
-													}
-													alt={item.caption}
-													fill
-													className={cn(
-														'rounded-lg transition-all hover:scale-105 object-contain'
-													)}
-												/>
+												{(view === 'desktop'
+													? item.srcDesktop
+													: item.srcMobile
+												).includes('.mp4') ? (
+													<video
+														key={view}
+														width="100%"
+														height="100%"
+														controls
+														preload="metadata"
+														className="rounded-sm transition-all hover:scale-105 h-full md:px-48"
+													>
+														<source
+															src={
+																view === 'desktop'
+																	? item.srcDesktop
+																	: item.srcMobile
+															}
+															type="video/mp4"
+														/>
+													</video>
+												) : (
+													<Image
+														loader={imageLoader}
+														src={
+															view === 'desktop'
+																? item.srcDesktop
+																: item.srcMobile
+														}
+														alt={item.caption}
+														fill
+														className="rounded-lg transition-all hover:scale-105 object-contain"
+													/>
+												)}
 											</div>
 										)}
 									</div>
