@@ -25,9 +25,24 @@ export const projectCardConfig: ProjectCardConfig = {
 		footer2: 'Universiti Teknologi Malaysia',
 		images: [
 			{
-				srcDesktop: '',
-				srcMobile: '',
-				caption: 'Caption',
+				srcDesktop: '/project/eazygas/desktop/signin.png',
+				srcMobile: '/project/eazygas/mobile/signin.png',
+				caption: 'Sign in page',
+			},
+			{
+				srcDesktop: '/project/eazygas/desktop/signup.png',
+				srcMobile: '/project/eazygas/mobile/signup.png',
+				caption: 'Sign up page',
+			},
+			{
+				srcDesktop: '/project/eazygas/desktop/forgotpassword.png',
+				srcMobile: '/project/eazygas/mobile/forgotpassword.png',
+				caption: 'Forgot password page',
+			},
+			{
+				srcDesktop: '/project/eazygas/desktop/dashboard.mp4',
+				srcMobile: '/project/eazygas/mobile/dashboard.mp4',
+				caption: 'Dashboard preview',
 			},
 		],
 	},
