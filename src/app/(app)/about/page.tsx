@@ -5,7 +5,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { Mail, Phone } from 'lucide-react';
-import Image, { ImageLoaderProps } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { GrMysql } from 'react-icons/gr';
@@ -21,10 +21,6 @@ import {
 	SiTypescript,
 } from 'react-icons/si';
 import './styles.css';
-
-const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
-	return `${src}?w=${width}&q=${quality || 75}`;
-};
 
 export default function Page() {
 	const [activeSection, setActiveSection] = useState('');
@@ -73,8 +69,7 @@ export default function Page() {
 					</h3>
 					<div className="flex-none relative w-[160px] h-[160px] border rounded-3xl ml-6 mb-2">
 						<Image
-							loader={imageLoader}
-							src="/map.png"
+							src="https://utfs.io/f/EEoJHWKJaHuwArjkpf4zCFEcpHvxSdWQX5Zm6JqIf0GBLnaT"
 							alt="Location of akieez"
 							fill
 							className="rounded-3xl object-cover"
@@ -167,8 +162,7 @@ export default function Page() {
 					</h2>
 					<div className="flex-none float-left relative w-[160px] h-[320px] border rounded-3xl mr-6 mb-2">
 						<Image
-							loader={imageLoader}
-							src="/aki.jpeg"
+							src="https://utfs.io/f/EEoJHWKJaHuwDHo825U2zl1RGeJKi9ZayOF6hn0PqYfUWMpI"
 							alt="Picture of akieez"
 							fill
 							className="rounded-3xl object-cover"

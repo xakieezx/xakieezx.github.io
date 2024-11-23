@@ -1,9 +1,6 @@
 'use client';
-import Image, { ImageLoaderProps } from 'next/image';
-
-const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
-	return `${src}?w=${width}&q=${quality || 75}`;
-};
+import { projectCardConfig } from '@/config/project';
+import Image from 'next/image';
 
 export default function Page() {
 	return (
@@ -25,8 +22,7 @@ export default function Page() {
 			{/* hero image */}
 			<div className="mt-20 relative w-full h-[300px] md:h-[500px]">
 				<Image
-					loader={imageLoader}
-					src="/aki.jpeg"
+					src="https://utfs.io/f/EEoJHWKJaHuwDHo825U2zl1RGeJKi9ZayOF6hn0PqYfUWMpI"
 					alt="Picture of akieez"
 					fill
 					className="rounded-3xl object-cover"
@@ -84,8 +80,7 @@ export default function Page() {
 					</p>
 					<div className="mt-20 relative w-full h-[300px] md:h-[500px]">
 						<Image
-							loader={imageLoader}
-							src="/project/eazygas/desktop/signin.png"
+							src="https://utfs.io/f/EEoJHWKJaHuwBAmHwTQuJTQFN10k3nqOmAKc247pVMrlGWXC"
 							alt="Sign in page"
 							fill
 							className="rounded-sm object-cover"
@@ -141,8 +136,7 @@ export default function Page() {
 					<p className="mt-1 text-sm text-center">Dashboard overview</p>
 					<div className="mt-20 relative w-full h-[300px] md:h-[500px]">
 						<Image
-							loader={imageLoader}
-							src="/project/eazygas/desktop/table-inventory.png"
+							src="https://utfs.io/f/EEoJHWKJaHuwpifpEcJe6hiRverzxUNbjX27PsIVAwHupm3d"
 							alt="Table-inventory"
 							fill
 							className="rounded-sm object-cover"

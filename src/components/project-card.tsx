@@ -20,14 +20,10 @@ import { ProjectCardDetails } from '@/config/project';
 import { cn } from '@/lib/utils';
 import Autoplay from 'embla-carousel-autoplay';
 import { LaptopMinimal, Smartphone, SquareArrowOutUpRight } from 'lucide-react';
-import Image, { ImageLoaderProps } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { Icons } from './icons';
-
-const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
-	return `${src}?w=${width}&q=${quality || 75}`;
-};
 
 interface ProjectCardProps {
 	project: ProjectCardDetails;
@@ -102,8 +98,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 											<div className="relative w-full h-full max-w-full max-h-full">
 												{(view === 'desktop'
 													? item.srcDesktop
-													: item.srcMobile
-												).includes('.mp4') ? (
+													: item.srcMobile) && item.video ? (
 													<video
 														key={view}
 														width="100%"
@@ -123,7 +118,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
 													</video>
 												) : (
 													<Image
-														loader={imageLoader}
 														src={
 															view === 'desktop'
 																? item.srcDesktop
