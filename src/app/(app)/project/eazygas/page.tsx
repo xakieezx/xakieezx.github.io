@@ -96,7 +96,7 @@ export default function Page() {
 							className="rounded-sm h-full"
 						>
 							<source
-								src="/project/eazygas/desktop/admin-crud.mp4"
+								src="https://utfs.io/f/EEoJHWKJaHuw5futILCkS8Uo9fehzIny4BYZNLtWD2Glpc0K"
 								type="video/mp4"
 							/>
 						</video>
@@ -113,7 +113,7 @@ export default function Page() {
 							className="rounded-sm h-full"
 						>
 							<source
-								src="/project/eazygas/desktop/order-fulfilment.mp4#t=0.5"
+								src="https://utfs.io/f/EEoJHWKJaHuwOHZzQ0yF0DAhf6L8wCoZxamORlEWI2PHBNT3#t=0.5"
 								type="video/mp4"
 							/>
 						</video>
@@ -128,7 +128,7 @@ export default function Page() {
 							className="rounded-sm h-full"
 						>
 							<source
-								src="/project/eazygas/desktop/dashboard.mp4"
+								src="https://utfs.io/f/EEoJHWKJaHuwrw2h6MI8xZmQMf7waS6YGCyOhDW5lTupXeqP"
 								type="video/mp4"
 							/>
 						</video>
